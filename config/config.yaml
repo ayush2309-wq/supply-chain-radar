@@ -1,0 +1,37 @@
+ingestion:
+  news:
+    keywords:
+      - "supply chain"
+      - "port strike"
+      - "shipping delay"
+      - "trade sanctions"
+      - "factory shutdown"
+      - "freight rate"
+      - "logistics disruption"
+    lookback_days: 7
+    page_size: 10
+
+  prices:
+    tickers:
+      oil: "CL=F"
+      gas: "NG=F"
+      freight: "BDRY"
+      copper: "HG=F"
+      aluminum: "ALI=F"
+    lookback_days: 30
+
+  geo:
+    regions:
+      - "CN"
+      - "US"
+      - "DE"
+      - "IN"
+      - "TW"
+      - "SA"
+      - "RU"
+      - "UA"
+      - "IR"
+
+database:
+  url: "postgresql://user:password@localhost:5432/supply_radar"
+  pool_size: 10
